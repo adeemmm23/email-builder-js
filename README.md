@@ -75,8 +75,6 @@ The email builder can output to a clean JSON or raw HTML. You can see this from 
 
 ![Image of JSON in builder](images/output.png)
 
-<br>
-
 ## Using EmailBuilder.js
 
 Install the package in your project:
@@ -213,7 +211,7 @@ Quick start:
 3. Go to the editor-sample package: `cd packages/editor-sample`
 4. Install packages: `npm install`
 5. Run the server: `npx vite`
-6. Open in browser: http://localhost:5173/email-builder-js/
+6. Open in browser: <http://localhost:5173/email-builder-js/>
 
 ---
 
@@ -237,4 +235,4 @@ EmailBuilder.js is the community version of our much-loved no-code template buil
 
 ## Looking for something special?
 
-Need special consultation, a one-off feature, integration, or something else for your business? We can help or put you in touch with someone that can – contact us at support@usewaypoint.com and share your details.
+Need special consultation, a one-off feature, integration, or something else for your business? We can help or put you in touch with someone that can – contact us at <support@usewaypoint.com> and share your details.
