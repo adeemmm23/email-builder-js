@@ -18,6 +18,7 @@ const ICON_SX: SxProps = {
   p: 1,
   border: '1px solid',
   borderColor: 'cadet.300',
+  borderRadius: 1,
 };
 
 export default function BlockTypeButton({ label, icon, onClick }: BlockMenuButtonProps) {
