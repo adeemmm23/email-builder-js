@@ -1,33 +1,15 @@
 import { z } from 'zod';
 
-const COLOR_SCHEMA = z
-  .string()
-  .regex(/^#[0-9a-fA-F]{6}$/)
-  .nullable()
-  .optional();
-
-const FONT_FAMILY_SCHEMA = z
-  .enum([
-    'MODERN_SANS',
-    'BOOK_SANS',
-    'ORGANIC_SANS',
-    'GEOMETRIC_SANS',
-    'HEAVY_SANS',
-    'ROUNDED_SANS',
-    'MODERN_SERIF',
-    'BOOK_SERIF',
-    'MONOSPACE',
-  ])
-  .nullable()
-  .optional();
+import { zColor, zFontFamily, zPadding } from '../helpers/zod';
 
 const EmailLayoutPropsSchema = z.object({
-  backdropColor: COLOR_SCHEMA,
-  borderColor: COLOR_SCHEMA,
+  backdropColor: zColor().optional().nullable(),
+  borderColor: zColor().optional().nullable(),
   borderRadius: z.number().optional().nullable(),
-  canvasColor: COLOR_SCHEMA,
-  textColor: COLOR_SCHEMA,
-  fontFamily: FONT_FAMILY_SCHEMA,
+  canvasColor: zColor().optional().nullable(),
+  textColor: zColor().optional().nullable(),
+  fontFamily: zFontFamily().optional().nullable(),
+  padding: zPadding().optional().nullable(),
   childrenIds: z.array(z.string()).optional().nullable(),
 });
 

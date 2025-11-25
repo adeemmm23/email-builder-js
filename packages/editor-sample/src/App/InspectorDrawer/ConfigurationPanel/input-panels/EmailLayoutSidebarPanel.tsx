@@ -9,6 +9,7 @@ import EmailLayoutPropsSchema, {
 import BaseSidebarPanel from './helpers/BaseSidebarPanel';
 import ColorInput, { NullableColorInput } from './helpers/inputs/ColorInput';
 import { NullableFontFamily } from './helpers/inputs/FontFamily';
+import PaddingInput from './helpers/inputs/PaddingInput';
 import SliderInput from './helpers/inputs/SliderInput';
 
 type EmailLayoutSidebarFieldsProps = {
@@ -65,6 +66,11 @@ export default function EmailLayoutSidebarFields({ data, setData }: EmailLayoutS
         label="Text color"
         defaultValue={data.textColor ?? '#262626'}
         onChange={(textColor) => updateData({ ...data, textColor })}
+      />
+      <PaddingInput
+        label="Padding"
+        defaultValue={data.padding ?? { top: 32, right: 0, bottom: 32, left: 0 }}
+        onChange={(padding) => updateData({ ...data, padding })}
       />
     </BaseSidebarPanel>
   );

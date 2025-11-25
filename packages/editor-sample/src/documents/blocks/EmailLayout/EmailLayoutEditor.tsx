@@ -6,6 +6,7 @@ import EditorChildrenIds from '../helpers/EditorChildrenIds';
 
 import { EmailLayoutProps } from './EmailLayoutPropsSchema';
 
+// TODO: use already defined font family mapping
 function getFontFamily(fontFamily: EmailLayoutProps['fontFamily']) {
   const f = fontFamily ?? 'MODERN_SANS';
   switch (f) {
@@ -40,6 +41,7 @@ export default function EmailLayoutEditor(props: EmailLayoutProps) {
       onClick={() => {
         setSelectedBlockId(null);
       }}
+      // TODO: sync default values
       style={{
         backgroundColor: props.backdropColor ?? '#F5F5F5',
         color: props.textColor ?? '#262626',
@@ -49,7 +51,7 @@ export default function EmailLayoutEditor(props: EmailLayoutProps) {
         letterSpacing: '0.15008px',
         lineHeight: '1.5',
         margin: '0',
-        padding: '32px 0',
+        padding: `${props.padding?.top ?? 32}px ${props.padding?.right ?? 0}px ${props.padding?.bottom ?? 32}px ${props.padding?.left ?? 0}px`,
         width: '100%',
         minHeight: '100%',
       }}
