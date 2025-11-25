@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ArrowDownwardOutlined, ArrowUpwardOutlined, CopyAllOutlined, DeleteOutlined } from '@mui/icons-material';
-import { IconButton, Paper, Stack, SxProps, Tooltip } from '@mui/material';
+import { Divider, IconButton, Paper, Stack, SxProps, Tooltip } from '@mui/material';
 
 import { TEditorBlock } from '../../../editor/core';
 import { resetDocument, setSelectedBlockId, useDocument } from '../../../editor/EditorContext';
@@ -325,6 +325,22 @@ export default function TuneMenu({ blockId }: Props) {
   return (
     <Paper sx={sx} onClick={(ev) => ev.stopPropagation()}>
       <Stack>
+        <Tooltip title="Delete" placement="left-start">
+          <IconButton onClick={handleDeleteClick} sx={{ color: 'text.primary', paddingY: 1.5, borderRadius: 50 }}>
+            <DeleteOutlined fontSize="small" />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Duplicate" placement="left-start">
+          <IconButton onClick={handleDuplicateClick} sx={{ color: 'text.primary', paddingY: 1.5, borderRadius: 50 }}>
+            <CopyAllOutlined fontSize="small" />
+          </IconButton>
+        </Tooltip>
+        <Divider
+          sx={{
+            marginY: 0.5,
+            marginX: 0.5,
+          }}
+        />
         <Tooltip title="Move up" placement="left-start">
           <IconButton
             onClick={() => handleMoveClick('up')}
@@ -339,16 +355,6 @@ export default function TuneMenu({ blockId }: Props) {
             sx={{ color: 'text.primary', paddingY: 1.5, borderRadius: 50 }}
           >
             <ArrowDownwardOutlined fontSize="small" />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Duplicate" placement="left-start">
-          <IconButton onClick={handleDuplicateClick} sx={{ color: 'text.primary', paddingY: 1.5, borderRadius: 50 }}>
-            <CopyAllOutlined fontSize="small" />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Delete" placement="left-start">
-          <IconButton onClick={handleDeleteClick} sx={{ color: 'text.primary', paddingY: 1.5, borderRadius: 50 }}>
-            <DeleteOutlined fontSize="small" />
           </IconButton>
         </Tooltip>
       </Stack>
