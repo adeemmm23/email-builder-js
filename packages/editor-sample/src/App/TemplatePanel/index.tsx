@@ -20,7 +20,9 @@ import HtmlPanel from './HtmlPanel';
 import ImportJson from './ImportJson';
 import JsonPanel from './JsonPanel';
 import MainTabsGroup from './MainTabsGroup';
+import Redo from './Redo';
 import ShareButton from './ShareButton';
+import Undo from './Undo';
 
 export default function TemplatePanel() {
   const document = useDocument();
@@ -97,6 +99,8 @@ export default function TemplatePanel() {
           </Stack>
           <Stack direction="row" spacing={2}>
             <CopyRich />
+            <Undo />
+            <Redo />
             <DownloadJson />
             <ImportJson />
             <ToggleButtonGroup value={selectedScreenSize} exclusive size="small" onChange={handleScreenSizeChange}>
