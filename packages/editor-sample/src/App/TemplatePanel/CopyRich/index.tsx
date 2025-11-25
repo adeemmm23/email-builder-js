@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 
-import { CheckOutlined, CopyAllOutlined } from '@mui/icons-material';
+import { CheckOutlined, ContentCopyOutlined } from '@mui/icons-material';
 import { IconButton, Tooltip } from '@mui/material';
 import { renderToStaticMarkup } from '@usewaypoint/email-builder';
 
@@ -47,7 +47,7 @@ export default function CopyRich() {
   return (
     <Tooltip title={copied ? 'Copied!' : 'Copy as Rich Text'}>
       <IconButton onClick={handleCopyRich} color={copied ? 'success' : 'default'}>
-        {copied ? <CheckOutlined fontSize="small" /> : <CopyAllOutlined fontSize="small" />}
+        {copied ? <CheckOutlined fontSize="small" /> : <ContentCopyOutlined fontSize="small" />}
       </IconButton>
     </Tooltip>
   );
