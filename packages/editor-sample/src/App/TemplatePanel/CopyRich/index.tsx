@@ -2,8 +2,8 @@ import React, { useMemo, useState } from 'react';
 
 import { CheckOutlined, ContentCopyOutlined } from '@mui/icons-material';
 import { IconButton, Tooltip } from '@mui/material';
-import { renderToStaticMarkup } from '@usewaypoint/email-builder';
 
+import renderToStaticMarkup from '../../../../email-builder/src/renderers/renderToStaticMarkup';
 import { useDocument } from '../../../documents/editor/EditorContext';
 
 export default function CopyRich() {

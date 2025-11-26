@@ -2,8 +2,8 @@ import React from 'react';
 
 import { MonitorOutlined, PhoneIphoneOutlined } from '@mui/icons-material';
 import { Box, Stack, SxProps, ToggleButton, ToggleButtonGroup, Tooltip } from '@mui/material';
-import { Reader } from '@usewaypoint/email-builder';
 
+import Reader from '../../../email-builder/src/Reader/core';
 import EditorBlock from '../../documents/editor/EditorBlock';
 import {
   setSelectedScreenSize,
