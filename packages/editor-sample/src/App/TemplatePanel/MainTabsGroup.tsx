@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CodeOutlined, DataObjectOutlined, EditOutlined, PreviewOutlined } from '@mui/icons-material';
+import { CodeOutlined, DataObjectOutlined, EditOutlined, VisibilityOutlined } from '@mui/icons-material';
 import { Tab, Tabs, Tooltip } from '@mui/material';
 
 import { setSelectedMainTab, useSelectedMainTab } from '../../documents/editor/EditorContext';
@@ -34,7 +34,7 @@ export default function MainTabsGroup() {
         value="preview"
         label={
           <Tooltip title="Preview">
-            <PreviewOutlined fontSize="small" />
+            <VisibilityOutlined fontSize="small" />
           </Tooltip>
         }
       />
