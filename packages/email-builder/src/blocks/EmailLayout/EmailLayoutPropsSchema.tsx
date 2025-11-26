@@ -28,6 +28,15 @@ export const EmailLayoutPropsSchema = z.object({
   canvasColor: COLOR_SCHEMA,
   textColor: COLOR_SCHEMA,
   fontFamily: FONT_FAMILY_SCHEMA,
+  padding: z
+    .object({
+      top: z.number(),
+      bottom: z.number(),
+      right: z.number(),
+      left: z.number(),
+    })
+    .optional()
+    .nullable(),
   childrenIds: z.array(z.string()).optional().nullable(),
 });
 
